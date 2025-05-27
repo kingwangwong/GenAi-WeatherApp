@@ -52,7 +52,7 @@ public class WeatherApp {
         long now = System.currentTimeMillis();
         CacheEntry entry = cache.get(urlString);
         if (entry != null && (now - entry.timestamp) < CACHE_DURATION_MS) {
-            System.out.println("using cached response " ;
+            System.out.println("using cached response ");
             return entry.response;
         }
         URL url = new URL(urlString);
